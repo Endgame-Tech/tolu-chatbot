@@ -5,8 +5,10 @@ const reportRoutes = require("./routes/report.route.js");
 
 const app = express();
 
+
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 // Connect to MongoDB
 connectDB();
