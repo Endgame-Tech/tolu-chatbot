@@ -5,17 +5,9 @@ const connectDB = require("./config/db.js");
 const reportRoutes = require("./routes/report.route.js");
 
 const app = express();
-const FRONTEND_URL = process.env.FRONTEND_URL;
 
 // Middleware
 app.use(express.json());
-app.use(cors(
-  {
-    origin: FRONTEND_URL, // Allow your frontend
-    methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type,Authorization"
-  }
-));
 
 // Connect to MongoDB
 connectDB();
